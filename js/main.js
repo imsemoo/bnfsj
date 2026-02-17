@@ -173,4 +173,91 @@ $(function () {
       // Tab filtering logic can be added here
     });
   }
+
+  // ====== Video Showcase Tab Switching ======
+  const $videoTabs = $('.video-showcase__cat');
+  if ($videoTabs.length) {
+    $videoTabs.on('click', function() {
+      $videoTabs.removeClass('is-active');
+      $(this).addClass('is-active');
+      // Tab filtering logic can be added here
+    });
+  }
+
+  // ====== Video Modal ======
+  const $videoModal = $('[data-video-modal]');
+  const $videoIframe = $('[data-video-iframe]');
+  const $videoModalTitle = $('[data-video-modal-title]');
+  const $videoTriggers = $('[data-video-trigger]');
+  const $videoModalClose = $('[data-video-modal-close]');
+
+  const openVideoModal = (videoId, title) => {
+    // Set video source
+    const videoSrc = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1`;
+    $videoIframe.attr('src', videoSrc);
+    $videoModalTitle.text(title);
+    
+    // Show modal
+    $videoModal.attr('aria-hidden', 'false').addClass('is-active');
+    lockScroll(true);
+    
+    // Animate in
+    setTimeout(() => {
+      $videoModal.addClass('is-visible');
+    }, 10);
+  };
+
+  const closeVideoModal = () => {
+    $videoModal.removeClass('is-visible');
+    
+    // Wait for animation then hide and stop video
+    setTimeout(() => {
+      $videoModal.attr('aria-hidden', 'true').removeClass('is-active');
+      $videoIframe.attr('src', '');
+      lockScroll(false);
+    }, 300);
+  };
+
+  // Open modal on video click
+  $videoTriggers.on('click', function(e) {
+    e.preventDefault();
+    const videoId = $(this).data('video-id');
+    const videoTitle = $(this).data('video-title');
+    if (videoId) {
+      openVideoModal(videoId, videoTitle);
+    }
+  });
+
+  // Close modal
+  $videoModalClose.on('click', closeVideoModal);
+
+  // Close on ESC (update existing handler)
+  $(document).on('keydown', function(e) {
+    if (e.key === 'Escape') {
+      closeDrawer();
+      closeSearch();
+      closeAllDropdowns();
+      closeVideoModal();
+    }
+  });
+
+  // ====== Video Card Hover Effects ======
+  $('.video-card, .video-hero').on('mouseenter', function() {
+    $(this).addClass('is-hovering');
+  }).on('mouseleave', function() {
+    $(this).removeClass('is-hovering');
+  });
+
+  // ====== Video Modal Action Buttons ======
+  $('.video-modal__action').on('click', function() {
+    $(this).toggleClass('is-active');
+    const $icon = $(this).find('i');
+    
+    // Toggle filled/outline icons
+    if ($icon.hasClass('fa-regular')) {
+      $icon.removeClass('fa-regular').addClass('fa-solid');
+    } else {
+      $icon.removeClass('fa-solid').addClass('fa-regular');
+    }
+  });
 });

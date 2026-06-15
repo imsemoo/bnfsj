@@ -12,19 +12,28 @@ $(function () {
     $("body").toggleClass("is-locked", lock);
   };
 
+  // Remember what was focused before an overlay opened, so we can restore it on close.
+  let lastFocus = null;
+  const rememberFocus = () => { lastFocus = document.activeElement; };
+  const restoreFocus = () => { if (lastFocus && lastFocus.focus) lastFocus.focus(); lastFocus = null; };
+
   const openDrawer = () => {
+    rememberFocus();
     $drawer.attr("aria-hidden", "false");
     $menuOpen.attr("aria-expanded", "true");
     lockScroll(true);
+    setTimeout(() => $drawer.find(".drawer__link, .icon-btn").first().trigger("focus"), 50);
   };
 
   const closeDrawer = () => {
     $drawer.attr("aria-hidden", "true");
     $menuOpen.attr("aria-expanded", "false");
     lockScroll(false);
+    restoreFocus();
   };
 
   const openSearch = () => {
+    rememberFocus();
     $search.attr("aria-hidden", "false");
     lockScroll(true);
     setTimeout(() => $search.find("input[type='search']").trigger("focus"), 50);
@@ -33,6 +42,7 @@ $(function () {
   const closeSearch = () => {
     $search.attr("aria-hidden", "true");
     lockScroll(false);
+    restoreFocus();
   };
 
   // Drawer
@@ -78,29 +88,6 @@ $(function () {
     }
   });
 
-  // ====== Soft Living Swiper ======
-  if ($('.soft-swiper').length) {
-    new Swiper('.soft-swiper', {
-      slidesPerView: 1,
-      spaceBetween: 20,
-      loop: false,
-      navigation: {
-        nextEl: '.soft-slider__nav--next',
-        prevEl: '.soft-slider__nav--prev',
-      },
-      breakpoints: {
-        600: {
-          slidesPerView: 2,
-          spaceBetween: 20,
-        },
-        900: {
-          slidesPerView: 3,
-          spaceBetween: 24,
-        }
-      }
-    });
-  }
-
   // ====== فلسطينيات Swiper ======
   if ($('.palest__swiper').length) {
     new Swiper('.palest__swiper', {
@@ -137,52 +124,38 @@ $(function () {
     });
   }
 
-  // ====== Series More Swiper ======
-  if ($('.series-more__swiper').length) {
-    new Swiper('.series-more__swiper', {
-      slidesPerView: 2,
-      spaceBetween: 16,
-      loop: false,
-      navigation: {
-        nextEl: '.series-more__nav--next',
-        prevEl: '.series-more__nav--prev',
-      },
-      breakpoints: {
-        480: {
-          slidesPerView: 2.5,
-          spaceBetween: 16,
-        },
-        768: {
-          slidesPerView: 3,
-          spaceBetween: 20,
-        },
-        1024: {
-          slidesPerView: 4,
-          spaceBetween: 24,
-        }
-      }
+  // ====== Category Tab Filtering (reusable) ======
+  // Filters cards whose [data-category] matches the clicked tab's [data-tab].
+  // data-tab="all" shows everything. Also manages is-active + aria-selected.
+  const initTabFilter = (tabSel, cardSel) => {
+    const $tabs = $(tabSel);
+    if (!$tabs.length) return;
+    $tabs.attr("role", "tab");
+    $tabs.each(function () {
+      $(this).attr("aria-selected", $(this).hasClass("is-active") ? "true" : "false");
     });
-  }
+    $tabs.on("click", function (e) {
+      e.preventDefault();
+      const cat = String($(this).data("tab"));
+      $tabs.removeClass("is-active").attr("aria-selected", "false");
+      $(this).addClass("is-active").attr("aria-selected", "true");
+      $(cardSel).each(function () {
+        const show = cat === "all" || String($(this).data("category")) === cat;
+        $(this).toggle(show);
+      });
+    });
+  };
 
-  // ====== Creative Hub Tab Switching ======
-  const $creativeTabs = $('.creative-hub__tab');
-  if ($creativeTabs.length) {
-    $creativeTabs.on('click', function() {
-      $creativeTabs.removeClass('is-active');
-      $(this).addClass('is-active');
-      // Tab filtering logic can be added here
-    });
-  }
+  initTabFilter(".lifestyle-tabs__tab", ".lt-card");
+  initTabFilter(".creative-hub__tab", ".creative-item");
+  initTabFilter(".video-showcase__cat", ".video-card");
 
-  // ====== Video Showcase Tab Switching ======
-  const $videoTabs = $('.video-showcase__cat');
-  if ($videoTabs.length) {
-    $videoTabs.on('click', function() {
-      $videoTabs.removeClass('is-active');
-      $(this).addClass('is-active');
-      // Tab filtering logic can be added here
-    });
-  }
+  // فلسطينيات categories — active state only (cards live inside a Swiper)
+  $(".palest__cat").on("click", function (e) {
+    e.preventDefault();
+    $(".palest__cat").removeClass("is-active").attr("aria-selected", "false");
+    $(this).addClass("is-active").attr("aria-selected", "true");
+  });
 
   // ====== Video Modal ======
   const $videoModal = $('[data-video-modal]');
@@ -192,30 +165,33 @@ $(function () {
   const $videoModalClose = $('[data-video-modal-close]');
 
   const openVideoModal = (videoId, title) => {
+    rememberFocus();
     // Set video source
     const videoSrc = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1`;
     $videoIframe.attr('src', videoSrc);
     $videoModalTitle.text(title);
-    
+
     // Show modal
     $videoModal.attr('aria-hidden', 'false').addClass('is-active');
     lockScroll(true);
-    
-    // Animate in
+
+    // Animate in + move focus to the close button
     setTimeout(() => {
       $videoModal.addClass('is-visible');
+      $videoModalClose.first().trigger('focus');
     }, 10);
   };
 
   const closeVideoModal = () => {
     $videoModal.removeClass('is-visible');
-    
+
     // Wait for animation then hide and stop video
     setTimeout(() => {
       $videoModal.attr('aria-hidden', 'true').removeClass('is-active');
       $videoIframe.attr('src', '');
       lockScroll(false);
     }, 300);
+    restoreFocus();
   };
 
   // Open modal on video click

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 
   <head>
     <meta charset="UTF-8">
@@ -31,25 +31,6 @@
     <link rel="shortcut icon" href="images/logo.png" type="image/png">
     <link rel="icon" href="images/logo.png" type="image/png">
 
-    <style type="text/css">
-      @font-face {
-        font-family: Banafsaj-Arabic;
-        font-display: auto;
-        src: url('https://bnfsj.net/style/assets/stylesheet/fonts/font/Al-Jazeera-Arabic-Bold.woff') format('woff');
-        font-weight: 700;
-        font-style: normal;
-        font-display: fallback
-      }
-
-      @font-face {
-        font-family: Banafsaj-Arabic;
-        src: url('https://bnfsj.net/style/assets/stylesheet/fonts/font/Al-Jazeera-Arabic-Regular.woff') format('woff');
-        font-weight: 400;
-        font-style: normal;
-        font-display: fallback
-      }
-    </style>
-
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
@@ -64,8 +45,10 @@
   </head>
 
   <body>
+    <a class="skip-link" href="#main">تخطّي إلى المحتوى</a>
+
     <!-- ====== Topbar ====== -->
-    <div class="site-topbar" role="banner">
+    <div class="site-topbar">
       <div class="container site-topbar__inner">
         <div class="site-topbar__social" aria-label="روابط اجتماعية">
           <a class="icon-btn" href="#" aria-label="Facebook">
@@ -241,6 +224,7 @@
     </div>
 
 
+    <main id="main">
     <section class="hero-spread" aria-label="المحتوى المميز">
       <div class="container hero-spread__wrap">
 
@@ -261,7 +245,7 @@
               </h1>
 
               <p class="hero-cover__excerpt">
-                تمهيد قصير جدًا سطرين بالكتير يخلي الإحساس مجلة راقية من غير زحمة.
+                في حوارٍ خاصّ، تروي آلاء العرابيد كيف حوّلت فقد زوجها وبناتها الأربع إلى شهادةٍ على الصبر وإرادة البقاء.
               </p>
 
               <div class="hero-cover__meta">
@@ -287,7 +271,7 @@
                   <span class="hero-picks__num" aria-hidden="true">01</span>
                   <div class="hero-picks__body">
                     <span class="hero-picks__kicker">حوارات</span>
-                    <h3 class="hero-picks__title">حين يسبق الحدس الخبر: امرأة تحتضن الفقد مرتين</h3>
+                    <h2 class="hero-picks__title">حين يسبق الحدس الخبر: امرأة تحتضن الفقد مرتين</h2>
                   </div>
                 </a>
               </li>
@@ -297,8 +281,8 @@
                   <span class="hero-picks__num" aria-hidden="true">02</span>
                   <div class="hero-picks__body">
                     <span class="hero-picks__kicker">حضور امرأة</span>
-                    <h3 class="hero-picks__title">إلى ذاكرة الأمة: حكاية أقدم أسيرتين في سجون
-                      الاحتلال</h3>
+                    <h2 class="hero-picks__title">إلى ذاكرة الأمة: حكاية أقدم أسيرتين في سجون
+                      الاحتلال</h2>
                   </div>
                 </a>
               </li>
@@ -308,7 +292,7 @@
                   <span class="hero-picks__num" aria-hidden="true">03</span>
                   <div class="hero-picks__body">
                     <span class="hero-picks__kicker">فكر</span>
-                    <h3 class="hero-picks__title">قراءة هادئة: في وجه الحياة المرّة وحدها</h3>
+                    <h2 class="hero-picks__title">قراءة هادئة: في وجه الحياة المرّة وحدها</h2>
                   </div>
                 </a>
               </li>
@@ -366,7 +350,7 @@
               <div class="wv-hero__content">
                 <span class="wv-hero__cat">حوارات</span>
                 <h3 class="wv-hero__title">وفاء عياش: حين أصابتني الحرب في العزيز</h3>
-                <p class="wv-hero__excerpt">تمهيد قصير جدًا يليق بروح المجلة سطر أو سطرين يفتح شهية القراءة بدون زحمة.
+                <p class="wv-hero__excerpt">تستعيد وفاء عياش لحظةَ أصابتها الحرب في أعزّ ما تملك، وتكتب عن المعنى الذي وُلد من قلب الخسارة.
                 </p>
                 <div class="wv-hero__meta">
                   <span class="wv-hero__author"><i class="fa-solid fa-pen-nib"></i> منى الأميطل</span>
@@ -428,12 +412,12 @@
             <article class="wv-card">
               <a href="#" class="wv-card__link">
                 <div class="wv-card__img">
-                  <img src="https://bnfsj.net/thumb/400x300/uploads/images/2026/02/ZSYkp.webp" alt="قراءة هادئة"
+                  <img src="https://bnfsj.net/thumb/400x300/uploads/images/2026/02/DwsUV.webp" alt="نساء في الظل"
                     loading="lazy" />
                 </div>
                 <div class="wv-card__body">
                   <span class="wv-card__cat">مقالات</span>
-                  <h4 class="wv-card__title">قراءة هادئة: في وجه الحياة المرّة وحدها</h4>
+                  <h4 class="wv-card__title">نساء في الظل: حكايات لم يكتبها التاريخ بعد</h4>
                   <div class="wv-card__meta">
                     <span>فاطمة علي</span>
                   </div>
@@ -851,36 +835,36 @@
               <a href="#" class="series-ep">
                 <span class="series-ep__num">04</span>
                 <div class="series-ep__info">
-                  <h5 class="series-ep__title">خديجة… الأم التي حملت أسرتها</h5>
-                  <span class="series-ep__author"><i class="fa-regular fa-user"></i> مريم خالد</span>
+                  <h5 class="series-ep__title">خديجة… الأم التي حملت أسرةً على كتفيها</h5>
+                  <span class="series-ep__author"><i class="fa-regular fa-user" aria-hidden="true"></i> مريم خالد</span>
                 </div>
               </a>
               <a href="#" class="series-ep">
                 <span class="series-ep__num">05</span>
                 <div class="series-ep__info">
-                  <h5 class="series-ep__title">خديجة… الأم التي حملت أسرتها</h5>
-                  <span class="series-ep__author"><i class="fa-regular fa-user"></i> هدى محمد</span>
+                  <h5 class="series-ep__title">نعيمة… يدٌ تزرع الأمل في أرض الشتات</h5>
+                  <span class="series-ep__author"><i class="fa-regular fa-user" aria-hidden="true"></i> سُهى ناصر</span>
                 </div>
               </a>
-                   <a href="#" class="series-ep">
+              <a href="#" class="series-ep">
                 <span class="series-ep__num">06</span>
                 <div class="series-ep__info">
-                  <h5 class="series-ep__title">خديجة… الأم التي حملت أسرتها</h5>
-                  <span class="series-ep__author"><i class="fa-regular fa-user"></i> هدى محمد</span>
+                  <h5 class="series-ep__title">صبحة… ذاكرةٌ تقاوم النسيان</h5>
+                  <span class="series-ep__author"><i class="fa-regular fa-user" aria-hidden="true"></i> رنا الأحمد</span>
                 </div>
               </a>
-                   <a href="#" class="series-ep">
+              <a href="#" class="series-ep">
                 <span class="series-ep__num">07</span>
                 <div class="series-ep__info">
-                  <h5 class="series-ep__title">خديجة… الأم التي حملت أسرتها</h5>
-                  <span class="series-ep__author"><i class="fa-regular fa-user"></i> هدى محمد</span>
+                  <h5 class="series-ep__title">وداد… معلّمةٌ صنعت من الفقر مدرسة</h5>
+                  <span class="series-ep__author"><i class="fa-regular fa-user" aria-hidden="true"></i> ليلى عبد الله</span>
                 </div>
               </a>
-                   <a href="#" class="series-ep">
+              <a href="#" class="series-ep">
                 <span class="series-ep__num">08</span>
                 <div class="series-ep__info">
-                  <h5 class="series-ep__title">خديجة… الأم التي حملت أسرتها</h5>
-                  <span class="series-ep__author"><i class="fa-regular fa-user"></i> هدى محمد</span>
+                  <h5 class="series-ep__title">آمنة… حكاية صمودٍ خلف الأسوار</h5>
+                  <span class="series-ep__author"><i class="fa-regular fa-user" aria-hidden="true"></i> هدى محمد</span>
                 </div>
               </a>
             </div>
@@ -930,24 +914,24 @@
                   <span class="series-other__count">5 مقالات</span>
                 </div>
               </a>
-                <a href="#" class="series-other">
+              <a href="#" class="series-other">
                 <div class="series-other__cover">
-                  <img src="https://bnfsj.net/thumb/200x250/uploads/images/2026/02/ZSYkp.webp" alt="رسائل من القدس"
+                  <img src="https://bnfsj.net/thumb/200x250/uploads/images/2026/02/DwsUV.webp" alt="بنات الحقول"
                     loading="lazy">
                 </div>
                 <div class="series-other__info">
-                  <h5 class="series-other__title">رسائل من القدس</h5>
-                  <span class="series-other__count">5 مقالات</span>
+                  <h5 class="series-other__title">بنات الحقول</h5>
+                  <span class="series-other__count">7 مقالات</span>
                 </div>
               </a>
-                <a href="#" class="series-other">
+              <a href="#" class="series-other">
                 <div class="series-other__cover">
-                  <img src="https://bnfsj.net/thumb/200x250/uploads/images/2026/02/ZSYkp.webp" alt="رسائل من القدس"
+                  <img src="https://bnfsj.net/thumb/200x250/uploads/images/2026/02/ZSYkp.webp" alt="نساء على الضفّة"
                     loading="lazy">
                 </div>
                 <div class="series-other__info">
-                  <h5 class="series-other__title">رسائل من القدس</h5>
-                  <span class="series-other__count">5 مقالات</span>
+                  <h5 class="series-other__title">نساء على الضفّة</h5>
+                  <span class="series-other__count">9 مقالات</span>
                 </div>
               </a>
             </div>
@@ -999,7 +983,7 @@
         <div class="creative-hub__grid">
 
           <!-- Featured Story (Large) -->
-          <a href="#" class="creative-item creative-item--featured creative-item--story">
+          <a href="#" class="creative-item creative-item--featured creative-item--story" data-category="stories">
             <div class="creative-item__media">
               <img src="https://bnfsj.net/thumb/800x1000/uploads/images/2026/02/DwsUV.webp" alt="قصتي" loading="lazy">
               <div class="creative-item__overlay"></div>
@@ -1019,7 +1003,7 @@
           </a>
 
           <!-- Infographic (Vertical Tall) -->
-          <a href="#" class="creative-item creative-item--tall creative-item--infographic">
+          <a href="#" class="creative-item creative-item--tall creative-item--infographic" data-category="infographic">
             <div class="creative-item__media">
               <img src="https://bnfsj.net/thumb/600x900/uploads/images/2026/02/ZSYkp.webp" alt="إنفوجرافيك"
                 loading="lazy">
@@ -1042,7 +1026,7 @@
 
 
           <!-- Quote Card -->
-          <div class="creative-item creative-item--quote">
+          <div class="creative-item creative-item--quote" data-category="banafsajiyat">
             <blockquote class="creative-quote">
               <i class="fa-solid fa-quote-right creative-quote__icon" aria-hidden="true"></i>
               <p class="creative-quote__text">المرأة القوية لا تنتظر الفرص، بل تصنعها بيديها.</p>
@@ -1050,10 +1034,10 @@
             </blockquote>
           </div>
           <!-- Quote Card -->
-          <div class="creative-item creative-item--quote">
+          <div class="creative-item creative-item--quote" data-category="banafsajiyat">
             <blockquote class="creative-quote">
               <i class="fa-solid fa-quote-right creative-quote__icon" aria-hidden="true"></i>
-              <p class="creative-quote__text">المرأة القوية لا تنتظر الفرص، بل تصنعها بيديها.</p>
+              <p class="creative-quote__text">حين تكتب المرأة حكايتها، تتغيّر الحكاية كلّها.</p>
               <cite class="creative-quote__cite">— بنفسجيات</cite>
             </blockquote>
           </div>
@@ -1215,7 +1199,7 @@
           <!-- Video Cards List -->
           <div class="video-showcase__list">
 
-            <article class="video-card" data-video-trigger data-video-id="ScMzIvxBSi4" data-video-title="المرأة في التعليم: قصص ملهمة من المخيمات">
+            <article class="video-card" data-category="docs" data-video-trigger data-video-id="ScMzIvxBSi4" data-video-title="المرأة في التعليم: قصص ملهمة من المخيمات">
               <div class="video-card__thumb">
                 <img src="https://bnfsj.net/thumb/400x225/uploads/images/2026/02/ZSYkp.webp" 
                      alt="المرأة في التعليم" loading="lazy" />
@@ -1243,7 +1227,7 @@
               </div>
             </article>
 
-            <article class="video-card" data-video-trigger data-video-id="LXb3EKWsInQ" data-video-title="خلف الكاميرا: كيف يُصنع المحتوى في بنفسج؟">
+            <article class="video-card" data-category="talks" data-video-trigger data-video-id="LXb3EKWsInQ" data-video-title="خلف الكاميرا: كيف يُصنع المحتوى في بنفسج؟">
               <div class="video-card__thumb">
                 <img src="https://bnfsj.net/thumb/400x225/uploads/images/2026/02/DwsUV.webp" 
                      alt="خلف الكاميرا" loading="lazy" />
@@ -1268,7 +1252,7 @@
               </div>
             </article>
 
-            <article class="video-card" data-video-trigger data-video-id="9bZkp7q19f0" data-video-title="نساء صنعن التاريخ: سلسلة وثائقية قصيرة">
+            <article class="video-card" data-category="docs" data-video-trigger data-video-id="9bZkp7q19f0" data-video-title="نساء صنعن التاريخ: سلسلة وثائقية قصيرة">
               <div class="video-card__thumb">
                 <img src="https://bnfsj.net/thumb/400x225/uploads/images/2026/02/ZSYkp.webp" 
                      alt="نساء صنعن التاريخ" loading="lazy" />
@@ -1294,7 +1278,7 @@
               </div>
             </article>
 
-            <article class="video-card" data-video-trigger data-video-id="kJQP7kiw5Fk" data-video-title="يوميات أم في رمضان: بين المطبخ والروح">
+            <article class="video-card" data-category="stories" data-video-trigger data-video-id="kJQP7kiw5Fk" data-video-title="يوميات أم في رمضان: بين المطبخ والروح">
               <div class="video-card__thumb">
                 <img src="https://bnfsj.net/thumb/400x225/uploads/images/2026/02/DwsUV.webp" 
                      alt="يوميات أم في رمضان" loading="lazy" />
@@ -1353,7 +1337,7 @@
     <div class="video-modal" aria-hidden="true" data-video-modal>
       <div class="video-modal__backdrop" data-video-modal-close></div>
       <div class="video-modal__container">
-        <div class="video-modal__panel">
+        <div class="video-modal__panel" role="dialog" aria-modal="true" aria-label="مشغّل الفيديو">
           <!-- Close Button -->
           <button class="video-modal__close" type="button" aria-label="إغلاق" data-video-modal-close>
             <i class="fa-solid fa-xmark"></i>
@@ -1424,14 +1408,14 @@
           <article class="author-card">
             <div class="author-card__header">
               <div class="author-card__avatar">
-                <img src="https://bnfsj.net/thumb/1070x450/uploads/images/2026/02/ZSYkp.webp" alt="سارة النمر"
+                <img src="https://bnfsj.net/thumb/400x400/uploads/images/2026/02/ZSYkp.webp" alt="سارة النمر"
                   loading="lazy" />
               </div>
               <div class="author-card__info">
                 <h3 class="author-card__name">سارة النمر</h3>
                 <span class="author-card__role">كاتبة ومدوّنة</span>
               </div>
-              <a href="#" class="author-card__follow">
+              <a href="#" class="author-card__follow" aria-label="حفظ مقالات الكاتبة">
                 <i class="fa-regular fa-bookmark"></i>
               </a>
             </div>
@@ -1459,14 +1443,14 @@
           <article class="author-card">
             <div class="author-card__header">
               <div class="author-card__avatar">
-                <img src="https://bnfsj.net/thumb/1070x450/uploads/images/2026/02/DwsUV.webp" alt="نورة العبدالله"
+                <img src="https://bnfsj.net/thumb/400x400/uploads/images/2026/02/DwsUV.webp" alt="نورة العبدالله"
                   loading="lazy" />
               </div>
               <div class="author-card__info">
                 <h3 class="author-card__name">نورة العبدالله</h3>
                 <span class="author-card__role">باحثة اجتماعية</span>
               </div>
-              <a href="#" class="author-card__follow">
+              <a href="#" class="author-card__follow" aria-label="حفظ مقالات الكاتبة">
                 <i class="fa-regular fa-bookmark"></i>
               </a>
             </div>
@@ -1500,14 +1484,14 @@
           <article class="author-card">
             <div class="author-card__header">
               <div class="author-card__avatar">
-                <img src="https://bnfsj.net/thumb/1070x450/uploads/images/2026/02/ZSYkp.webp" alt="هنا سعيد"
+                <img src="https://bnfsj.net/thumb/400x400/uploads/images/2026/02/ZSYkp.webp" alt="هنا سعيد"
                   loading="lazy" />
               </div>
               <div class="author-card__info">
                 <h3 class="author-card__name">هنا سعيد</h3>
                 <span class="author-card__role">أخصائية نفسية</span>
               </div>
-              <a href="#" class="author-card__follow">
+              <a href="#" class="author-card__follow" aria-label="حفظ مقالات الكاتبة">
                 <i class="fa-regular fa-bookmark"></i>
               </a>
             </div>
@@ -1674,7 +1658,7 @@
           <article class="amb-showcase-card">
             <div class="amb-showcase-card__inner">
               <div class="amb-showcase-card__avatar">
-                <img src="https://bnfsj.net/thumb/1070x450/uploads/images/2026/02/ZSYkp.webp" alt="آية حسين"
+                <img src="https://bnfsj.net/thumb/400x400/uploads/images/2026/02/ZSYkp.webp" alt="آية حسين"
                   loading="lazy" />
               </div>
               <div class="amb-showcase-card__info">
@@ -1688,7 +1672,7 @@
           <article class="amb-showcase-card">
             <div class="amb-showcase-card__inner">
               <div class="amb-showcase-card__avatar">
-                <img src="https://bnfsj.net/thumb/1070x450/uploads/images/2026/02/DwsUV.webp" alt="منار الشيخ"
+                <img src="https://bnfsj.net/thumb/400x400/uploads/images/2026/02/DwsUV.webp" alt="منار الشيخ"
                   loading="lazy" />
               </div>
               <div class="amb-showcase-card__info">
@@ -1702,7 +1686,7 @@
           <article class="amb-showcase-card">
             <div class="amb-showcase-card__inner">
               <div class="amb-showcase-card__avatar">
-                <img src="https://bnfsj.net/thumb/1070x450/uploads/images/2026/02/ZSYkp.webp" alt="رنا الأحمد"
+                <img src="https://bnfsj.net/thumb/400x400/uploads/images/2026/02/ZSYkp.webp" alt="رنا الأحمد"
                   loading="lazy" />
               </div>
               <div class="amb-showcase-card__info">
@@ -1716,7 +1700,7 @@
           <article class="amb-showcase-card">
             <div class="amb-showcase-card__inner">
               <div class="amb-showcase-card__avatar">
-                <img src="https://bnfsj.net/thumb/1070x450/uploads/images/2026/02/DwsUV.webp" alt="سلمى عمر"
+                <img src="https://bnfsj.net/thumb/400x400/uploads/images/2026/02/DwsUV.webp" alt="سلمى عمر"
                   loading="lazy" />
               </div>
               <div class="amb-showcase-card__info">
@@ -1730,7 +1714,7 @@
           <article class="amb-showcase-card">
             <div class="amb-showcase-card__inner">
               <div class="amb-showcase-card__avatar">
-                <img src="https://bnfsj.net/thumb/1070x450/uploads/images/2026/02/ZSYkp.webp" alt="نور الحسن"
+                <img src="https://bnfsj.net/thumb/400x400/uploads/images/2026/02/ZSYkp.webp" alt="نور الحسن"
                   loading="lazy" />
               </div>
               <div class="amb-showcase-card__info">
@@ -1744,7 +1728,7 @@
           <article class="amb-showcase-card">
             <div class="amb-showcase-card__inner">
               <div class="amb-showcase-card__avatar">
-                <img src="https://bnfsj.net/thumb/1070x450/uploads/images/2026/02/DwsUV.webp" alt="هبة ناصر"
+                <img src="https://bnfsj.net/thumb/400x400/uploads/images/2026/02/DwsUV.webp" alt="هبة ناصر"
                   loading="lazy" />
               </div>
               <div class="amb-showcase-card__info">
@@ -1775,6 +1759,8 @@
     </section>
 
 
+    </main>
+
     <!-- ============================================================
              Footer — Premium Design
              ============================================================ -->
@@ -1797,8 +1783,8 @@
               <div class="footer-pro__newsletter">
                 <h4 class="footer-pro__newsletter-title">اشتركي في نشرتنا البريدية</h4>
                 <form class="footer-pro__form">
-                  <input type="email" placeholder="بريدك الإلكتروني" class="footer-pro__input" />
-                  <button type="submit" class="footer-pro__submit">
+                  <input type="email" placeholder="بريدك الإلكتروني" class="footer-pro__input" aria-label="بريدك الإلكتروني" />
+                  <button type="submit" class="footer-pro__submit" aria-label="اشتراك في النشرة">
                     <i class="fa-solid fa-paper-plane"></i>
                   </button>
                 </form>

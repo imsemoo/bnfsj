@@ -34,7 +34,6 @@ function head(title, desc) {
   </head>
 
   <body>
-    <a class="skip-link" href="#main">تخطّي إلى المحتوى</a>
 `;
 }
 

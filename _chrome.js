@@ -10,7 +10,7 @@ const NAV = [
   { label: "أسرة", href: "category.html" },
   { label: "ديكور", href: "articles.html?cat=decor" },
   { label: "فكر", href: "articles.html?cat=fikr" },
-  { label: "مدونات", href: "author.html" },
+  { label: "الكاتب", href: "author.html" },
   { label: "عن بنفسج", href: "about.html" },
 ];
 

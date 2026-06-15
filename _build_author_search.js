@@ -71,7 +71,7 @@ ${popular.map((a, i) => rankedItem(a, i + 1)).join("\n")}
       </section>`;
 
   fs.writeFileSync("author.html", page({
-    title: au.name, active: "مدونات", body,
+    title: au.name, active: "الكاتب", body,
     desc: `صفحة الكاتبة ${au.name} في بنفسج: سيرتها وأحدث مقالاتها والأكثر قراءة.`,
   }));
   console.log("author.html written");

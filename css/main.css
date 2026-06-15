@@ -744,6 +744,19 @@ body.is-locked {
 @media (max-width: 767px) {
     .site-header__inner {
         grid-template-columns: auto auto;
+        justify-content: space-between;
+        gap: var(--space-4);
+    }
+}
+
+/* Keep the brand + actions from overflowing on the smallest phones (≤360px) */
+@media (max-width: 400px) {
+    .site-brand__logo {
+        height: 40px;
+    }
+
+    .site-topbar__social {
+        gap: 0;
     }
 }
 

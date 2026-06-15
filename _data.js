@@ -30,7 +30,7 @@ const CATEGORIES = [
   { key: "matbakh", label: "مطبخ" },
   { key: "tatweer", label: "تطوير الذات" },
   { key: "fikr", label: "فكر" },
-  { key: "lك", label: "لكِ" },
+  { key: "lifestyle", label: "لكِ" },
 ];
 
 const catLabel = (k) => (CATEGORIES.find((c) => c.key === k) || {}).label || k;
@@ -76,7 +76,7 @@ const ARTICLES = [
   { id: 12, cat: "saha", img: "photo-1522075782449-e45a34f1ddfb", author: "hana", date: "21 مايو 2026", read: 8, views: 8500,
     title: "خلوةٌ مع الذات: في فضل اللحظات التي نقضيها وحدنا",
     excerpt: "العزلة المختارة ليست وحدة؛ إنها مساحةٌ نُعيد فيها ترتيب أنفسنا بهدوء." },
-  { id: 11, cat: "lك", img: "photo-1570554886111-e80fcca6a029", author: "mariam", date: "18 مايو 2026", read: 5, views: 6100, crop: "entropy",
+  { id: 11, cat: "lifestyle", img: "photo-1570554886111-e80fcca6a029", author: "mariam", date: "18 مايو 2026", read: 5, views: 6100, crop: "entropy",
     title: "وصفاتٌ طبيعية لعنايةٍ لطيفة بشعركِ هذا الصيف",
     excerpt: "من زيت الأرغان إلى ماء الورد، مكوّناتٌ بسيطة من مطبخكِ تُعيد للشعر حيويته." },
   { id: 10, cat: "matbakh", img: "photo-1653611540493-b3a896319fbf", author: "mariam", date: "15 مايو 2026", read: 6, views: 5800, crop: "entropy",
@@ -100,7 +100,7 @@ const ARTICLES = [
   { id: 4, cat: "fikr", img: "photo-1446161543652-83eaa65fddab", author: "sara", date: "27 أبريل 2026", read: 10, views: 7300, crop: "entropy",
     title: "في حضرة الجدّات: ذاكرةٌ نسائية تتوارثها الأجيال",
     excerpt: "تحفظ الجدّات في صدورهنّ خرائطَ بيوتٍ وروائحَ حقول… ذاكرةٌ هي أجمل ما يُورَّث." },
-  { id: 3, cat: "lك", img: "photo-1556910638-6cdac31d44dc", author: "mariam", date: "24 أبريل 2026", read: 4, views: 5000, crop: "entropy",
+  { id: 3, cat: "lifestyle", img: "photo-1556910638-6cdac31d44dc", author: "mariam", date: "24 أبريل 2026", read: 4, views: 5000, crop: "entropy",
     title: "روتينٌ صباحي يشبهكِ: كيف تبدئين يومكِ بطاقةٍ ولُطف؟",
     excerpt: "خمسُ عاداتٍ صغيرة تمنح صباحكِ هدوءًا يرافقكِ حتى آخر النهار." },
   { id: 2, cat: "tatweer", img: "photo-1554244933-d876deb6b2ff", author: "rasha", date: "20 أبريل 2026", read: 8, views: 6600, crop: "entropy",

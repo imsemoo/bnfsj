@@ -3,13 +3,13 @@
 
 const NAV = [
   { label: "الرئيسية", href: "index.html" },
-  { label: "حضور امرأة", href: "category.html", sub: [["حوارات", "articles.html"]] },
-  { label: "سيدتي", href: "category.html", sub: [["صحة المرأة", "category.html"], ["لكِ", "category.html"]] },
-  { label: "فلسطينيات", href: "category.html", sub: [["مجتمع", "category.html"], ["ذاكرة", "category.html"]] },
-  { label: "سلاسل", href: "category.html", sub: [["هُنّ في عيوننا", "category.html"], ["سلسلة تعليم المقهورين", "category.html"], ["نَفَس", "category.html"]] },
+  { label: "حضور امرأة", href: "articles.html", sub: [["حوارات", "articles.html"]] },
+  { label: "سيدتي", href: "articles.html", sub: [["صحة المرأة", "articles.html?cat=saha"], ["لكِ", "articles.html?cat=lifestyle"]] },
+  { label: "فلسطينيات", href: "articles.html", sub: [["مجتمع", "articles.html"], ["ذاكرة", "articles.html"]] },
+  { label: "سلاسل", href: "articles.html", sub: [["هُنّ في عيوننا", "articles.html"], ["سلسلة تعليم المقهورين", "articles.html"], ["نَفَس", "articles.html"]] },
   { label: "أسرة", href: "category.html" },
-  { label: "ديكور", href: "category.html" },
-  { label: "فكر", href: "category.html" },
+  { label: "ديكور", href: "articles.html?cat=decor" },
+  { label: "فكر", href: "articles.html?cat=fikr" },
   { label: "مدونات", href: "author.html" },
   { label: "عن بنفسج", href: "about.html" },
 ];
@@ -153,11 +153,11 @@ function footer() {
             <div class="footer-pro__links">
               <h4 class="footer-pro__title">الأقسام</h4>
               <ul class="footer-pro__list">
-                <li><a href="category.html">حضور امرأة</a></li>
-                <li><a href="category.html">سيدتي</a></li>
-                <li><a href="category.html">فلسطينيات</a></li>
-                <li><a href="category.html">سلاسل</a></li>
-                <li><a href="category.html">فكر</a></li>
+                <li><a href="articles.html">حضور امرأة</a></li>
+                <li><a href="articles.html">سيدتي</a></li>
+                <li><a href="articles.html">فلسطينيات</a></li>
+                <li><a href="articles.html">سلاسل</a></li>
+                <li><a href="articles.html?cat=fikr">فكر</a></li>
               </ul>
             </div>
             <div class="footer-pro__links">
@@ -165,7 +165,7 @@ function footer() {
               <ul class="footer-pro__list">
                 <li><a href="articles.html">كل المقالات</a></li>
                 <li><a href="category.html">أسرة</a></li>
-                <li><a href="category.html">ديكور</a></li>
+                <li><a href="articles.html?cat=decor">ديكور</a></li>
                 <li><a href="author.html">مدونات</a></li>
                 <li><a href="index.html">فيديو</a></li>
               </ul>

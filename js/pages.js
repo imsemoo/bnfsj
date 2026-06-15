@@ -147,6 +147,18 @@
 
     if (searchInput) searchInput.addEventListener("input", apply);
 
+    // Honor ?cat= in the URL (header/footer category links open pre-filtered)
+    const urlCat = new URLSearchParams(window.location.search).get("cat");
+    if (urlCat) {
+      const target = chips.find((c) => c.dataset.filter === urlCat);
+      if (target) {
+        chips.forEach((c) => { c.classList.remove("is-active"); c.setAttribute("aria-selected", "false"); });
+        target.classList.add("is-active");
+        target.setAttribute("aria-selected", "true");
+        activeCat = urlCat;
+      }
+    }
+
     if (sortSelect) {
       sortSelect.addEventListener("change", function () {
         const mode = sortSelect.value;

@@ -163,13 +163,34 @@ $(function () {
   const $videoModalTitle = $('[data-video-modal-title]');
   const $videoTriggers = $('[data-video-trigger]');
   const $videoModalClose = $('[data-video-modal-close]');
+  const $videoLoader = $('.video-modal__loader');
+  let videoLoaderTimer = null;
+
+  // The loader sits on top of the iframe with an opaque background; reveal the
+  // video once the embed has loaded (with a fallback timeout so it never sticks).
+  const hideVideoLoader = () => {
+    clearTimeout(videoLoaderTimer);
+    $videoLoader.stop(true, true).fadeOut(200);
+  };
+  const showVideoLoader = () => {
+    clearTimeout(videoLoaderTimer);
+    $videoLoader.stop(true, true).css('display', 'flex').css('opacity', '');
+  };
+
+  $videoIframe.on('load', function () {
+    // Only meaningful once a real src is set (ignore the initial empty load)
+    if (($videoIframe.attr('src') || '').indexOf('youtube') !== -1) hideVideoLoader();
+  });
 
   const openVideoModal = (videoId, title) => {
     rememberFocus();
-    // Set video source
-    const videoSrc = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1`;
+    // Show the loader, then set the source
+    showVideoLoader();
+    const videoSrc = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1&playsinline=1`;
     $videoIframe.attr('src', videoSrc);
     $videoModalTitle.text(title);
+    // Fallback: never let the loader stick if the load event is missed
+    videoLoaderTimer = setTimeout(hideVideoLoader, 2500);
 
     // Show modal
     $videoModal.attr('aria-hidden', 'false').addClass('is-active');
@@ -184,11 +205,13 @@ $(function () {
 
   const closeVideoModal = () => {
     $videoModal.removeClass('is-visible');
+    clearTimeout(videoLoaderTimer);
 
     // Wait for animation then hide and stop video
     setTimeout(() => {
       $videoModal.attr('aria-hidden', 'true').removeClass('is-active');
       $videoIframe.attr('src', '');
+      showVideoLoader(); // reset for next open
       lockScroll(false);
     }, 300);
     restoreFocus();

@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>كل المقالات | بنفسج</title>
+    <meta name="description" content="أرشيف مقالات بنفسج: الأسرة، الأمومة، تطوير الذات، الديكور، الصحة والمطبخ — محتوًى نسائي راقٍ.">
+    <meta name="author" content="بنفسج">
+    <meta name="copyright" content="جميع الحقوق محفوظة لبنفسج © 2026">
+    <link rel="shortcut icon" href="images/logo.png" type="image/png">
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/pages.css">
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">تخطّي إلى المحتوى</a>
+    <!-- ====== Topbar ====== -->
+    <div class="site-topbar">
+      <div class="container site-topbar__inner">
+        <div class="site-topbar__social" aria-label="روابط اجتماعية">
+          <a class="icon-btn" href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+          <a class="icon-btn" href="#" aria-label="Twitter / X"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+          <a class="icon-btn" href="#" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+          <a class="icon-btn" href="#" aria-label="YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+          <a class="icon-btn" href="#" aria-label="SoundCloud"><i class="fa-brands fa-soundcloud" aria-hidden="true"></i></a>
+        </div>
+        <div class="site-topbar__meta"><span class="topbar-chip">حضور امرأة</span></div>
+      </div>
+    </div>
+
+    <!-- ====== Header ====== -->
+    <header class="site-header" data-header>
+      <div class="container site-header__inner">
+        <a class="site-brand" href="index.html" aria-label="بنفسج - الرئيسية">
+          <img src="images/logo.png" alt="بنفسج" class="site-brand__logo">
+        </a>
+        <nav class="site-nav" aria-label="التنقل الرئيسي" data-nav>
+          <ul class="site-nav__list">
+            <li class="site-nav__item"><a class="site-nav__link" href="index.html">الرئيسية</a></li>
+            <li class="site-nav__item has-subnav">
+              <button class="site-nav__link site-nav__toggle" type="button" aria-expanded="false" aria-controls="nav-sub-2">
+                حضور امرأة
+                <i class="fa-solid fa-chevron-down site-nav__chev" aria-hidden="true"></i>
+              </button>
+              <ul class="subnav" id="nav-sub-2" aria-label="حضور امرأة">
+                <li><a class="subnav__link" href="articles.html">حوارات</a></li>
+              </ul>
+            </li>
+            <li class="site-nav__item has-subnav">
+              <button class="site-nav__link site-nav__toggle" type="button" aria-expanded="false" aria-controls="nav-sub-3">
+                سيدتي
+                <i class="fa-solid fa-chevron-down site-nav__chev" aria-hidden="true"></i>
+              </button>
+              <ul class="subnav" id="nav-sub-3" aria-label="سيدتي">
+                <li><a class="subnav__link" href="category.html">صحة المرأة</a></li>
+                <li><a class="subnav__link" href="category.html">لكِ</a></li>
+              </ul>
+            </li>
+            <li class="site-nav__item has-subnav">
+              <button class="site-nav__link site-nav__toggle" type="button" aria-expanded="false" aria-controls="nav-sub-4">
+                فلسطينيات
+                <i class="fa-solid fa-chevron-down site-nav__chev" aria-hidden="true"></i>
+              </button>
+              <ul class="subnav" id="nav-sub-4" aria-label="فلسطينيات">
+                <li><a class="subnav__link" href="category.html">مجتمع</a></li>
+                <li><a class="subnav__link" href="category.html">ذاكرة</a></li>
+              </ul>
+            </li>
+            <li class="site-nav__item has-subnav">
+              <button class="site-nav__link site-nav__toggle" type="button" aria-expanded="false" aria-controls="nav-sub-5">
+                سلاسل
+                <i class="fa-solid fa-chevron-down site-nav__chev" aria-hidden="true"></i>
+              </button>
+              <ul class="subnav" id="nav-sub-5" aria-label="سلاسل">
+                <li><a class="subnav__link" href="category.html">هُنّ في عيوننا</a></li>
+                <li><a class="subnav__link" href="category.html">سلسلة تعليم المقهورين</a></li>
+                <li><a class="subnav__link" href="category.html">نَفَس</a></li>
+              </ul>
+            </li>
+            <li class="site-nav__item"><a class="site-nav__link" href="category.html">أسرة</a></li>
+            <li class="site-nav__item"><a class="site-nav__link" href="category.html">ديكور</a></li>
+            <li class="site-nav__item"><a class="site-nav__link" href="category.html">فكر</a></li>
+            <li class="site-nav__item"><a class="site-nav__link" href="author.html">مدونات</a></li>
+            <li class="site-nav__item"><a class="site-nav__link" href="about.html">عن بنفسج</a></li>
+          </ul>
+        </nav>
+        <div class="site-actions">
+          <button class="icon-btn" type="button" aria-label="بحث" data-search-open>
+            <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+          </button>
+          <button class="menu-btn" type="button" aria-label="فتح القائمة" aria-expanded="false" aria-controls="mobile-drawer" data-menu-open>
+            <span class="menu-btn__lines" aria-hidden="true"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ====== Drawer ====== -->
+    <div class="drawer" id="mobile-drawer" aria-hidden="true" data-drawer>
+      <div class="drawer__backdrop" data-menu-close></div>
+      <aside class="drawer__panel" role="dialog" aria-label="قائمة الهاتف" aria-modal="true">
+        <div class="drawer__header">
+          <span class="drawer__title">القائمة</span>
+          <button class="icon-btn" type="button" aria-label="إغلاق" data-menu-close><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+        </div>
+        <nav class="drawer__nav" aria-label="التنقل على الهاتف">
+          <a class="drawer__link" href="index.html">الرئيسية</a>
+          <details class="drawer__group">
+            <summary class="drawer__summary">حضور امرأة</summary>
+            <a class="drawer__sublink" href="articles.html">حوارات</a>
+          </details>
+          <details class="drawer__group">
+            <summary class="drawer__summary">سيدتي</summary>
+            <a class="drawer__sublink" href="category.html">صحة المرأة</a>
+            <a class="drawer__sublink" href="category.html">لكِ</a>
+          </details>
+          <details class="drawer__group">
+            <summary class="drawer__summary">فلسطينيات</summary>
+            <a class="drawer__sublink" href="category.html">مجتمع</a>
+            <a class="drawer__sublink" href="category.html">ذاكرة</a>
+          </details>
+          <details class="drawer__group">
+            <summary class="drawer__summary">سلاسل</summary>
+            <a class="drawer__sublink" href="category.html">هُنّ في عيوننا</a>
+            <a class="drawer__sublink" href="category.html">سلسلة تعليم المقهورين</a>
+            <a class="drawer__sublink" href="category.html">نَفَس</a>
+          </details>
+          <a class="drawer__link" href="category.html">أسرة</a>
+          <a class="drawer__link" href="category.html">ديكور</a>
+          <a class="drawer__link" href="category.html">فكر</a>
+          <a class="drawer__link" href="author.html">مدونات</a>
+          <a class="drawer__link" href="about.html">عن بنفسج</a>
+        </nav>
+      </aside>
+    </div>
+
+    <!-- ====== Search ====== -->
+    <div class="search" aria-hidden="true" data-search>
+      <div class="search__backdrop" data-search-close></div>
+      <div class="search__panel" role="dialog" aria-label="البحث" aria-modal="true">
+        <button class="search__close icon-btn" type="button" aria-label="إغلاق" data-search-close><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+        <form class="search__row" action="search-results.html" method="get">
+          <input class="search__input" type="search" name="q" placeholder="ابحثي عن مقال أو كاتب…" aria-label="بحث">
+          <button class="btn btn--primary" type="submit">بحث</button>
+        </form>
+      </div>
+    </div>
+
+    <main id="main">
+      <div class="container">
+        <nav class="breadcrumb page-hero__breadcrumb" aria-label="مسار التصفّح">
+          <a href="index.html">الرئيسية</a>
+          <span class="breadcrumb__sep">›</span>
+          <span class="breadcrumb__current">كل المقالات</span>
+        </nav>
+        <header class="page-hero">
+          <span class="page-hero__kicker">أرشيف بنفسج</span>
+          <h1 class="page-hero__title">كل المقالات</h1>
+          <p class="page-hero__lead">مكتبةٌ من القصص والأفكار التي تكتبها نساءٌ لنساء: عن الأسرة والأمومة والذات والبيت والروح. اقرئي على مهلكِ.</p>
+        </header>
+      </div>
+
+      <section class="container page--tight">
+        <div class="chip-row" role="tablist" aria-label="تصنيفات">
+          <button class="chip is-active" type="button" data-filter="all" aria-selected="true">الكل</button>
+          <button class="chip" type="button" data-filter="osra" aria-selected="false">أسرة</button>
+          <button class="chip" type="button" data-filter="omoma" aria-selected="false">أمومة</button>
+          <button class="chip" type="button" data-filter="decor" aria-selected="false">ديكور</button>
+          <button class="chip" type="button" data-filter="saha" aria-selected="false">صحة</button>
+          <button class="chip" type="button" data-filter="matbakh" aria-selected="false">مطبخ</button>
+          <button class="chip" type="button" data-filter="tatweer" aria-selected="false">تطوير الذات</button>
+          <button class="chip" type="button" data-filter="fikr" aria-selected="false">فكر</button>
+          <button class="chip" type="button" data-filter="lك" aria-selected="false">لكِ</button>
+        </div>
+        <div class="toolbar">
+          <p class="toolbar__count">عُثر على <strong data-archive-count>12</strong> مقالة</p>
+          <div class="toolbar__controls">
+            <label class="search-field">
+              <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+              <input type="search" data-archive-search placeholder="ابحثي في المقالات…" aria-label="بحث في المقالات">
+            </label>
+            <select class="select" data-archive-sort aria-label="ترتيب">
+              <option value="newest">الأحدث</option>
+              <option value="oldest">الأقدم</option>
+              <option value="popular">الأكثر قراءة</option>
+            </select>
+          </div>
+        </div>
+        <div class="archive-grid" data-archive-grid>
+          <a class="post-card" href="single-article.html" data-category="omoma" data-order="24" data-views="9100">
+            <div class="post-card__media">
+              <img src="https://images.unsplash.com/photo-1611066028607-cd58e29818f5?w=600&h=380&fit=crop&crop=faces&q=80&auto=format" alt="نوال العلي: تعلّمتُ من أبنائي أنّ الحبّ يُربّي قبل أن يُربّي الكلام" loading="lazy">
+              <span class="post-card__cat">أمومة</span>
+            </div>
+            <div class="post-card__body">
+              <h3 class="post-card__title">نوال العلي: تعلّمتُ من أبنائي أنّ الحبّ يُربّي قبل أن يُربّي الكلام</h3>
+              <p class="post-card__excerpt">في حوارٍ دافئ عن الأمومة بوصفها رحلة نموٍّ متبادل، وعن اللحظات الصغيرة التي تصنع الأمان في قلوب أبنائنا.</p>
+              <div class="post-card__meta">
+                <span class="post-card__author"><i class="fa-solid fa-feather" aria-hidden="true"></i> أسماء عوض</span>
+                <span><i class="fa-regular fa-calendar" aria-hidden="true"></i> 12 يونيو 2026</span>
+                <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 7 د قراءة</span>
+              </div>
+            </div>
+          </a>
+          <a class="post-card" href="single-article.html" data-category="tatweer" data-order="23" data-views="7400">
+            <div class="post-card__media">
+              <img src="https://images.unsplash.com/photo-1681152299027-17efe7da7081?w=600&h=380&fit=crop&crop=faces&q=80&auto=format" alt="اخترتُ أن أبدأ من جديد… فوجدتُ نفسي" loading="lazy">
+              <span class="post-card__cat">تطوير الذات</span>
+            </div>
+            <div class="post-card__body">
+              <h3 class="post-card__title">اخترتُ أن أبدأ من جديد… فوجدتُ نفسي</h3>
+              <p class="post-card__excerpt">بعد سنواتٍ من العطاء للآخرين، كيف يصير التغيير في منتصف العمر بدايةً لا نهاية.</p>
+              <div class="post-card__meta">
+                <span class="post-card__author"><i class="fa-solid fa-feather" aria-hidden="true"></i> رشا المصري</span>
+                <span><i class="fa-regular fa-calendar" aria-hidden="true"></i> 9 يونيو 2026</span>
+                <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 6 د قراءة</span>
+              </div>
+            </div>
+          </a>
+          <a class="post-card" href="single-article.html" data-category="osra" data-order="22" data-views="8800">
+            <div class="post-card__media">
+              <img src="https://images.unsplash.com/photo-1583357820970-221489bb3e72?w=600&h=380&fit=crop&crop=faces&q=80&auto=format" alt="التربية بالحبّ: كيف نبني مع أطفالنا علاقةً تدوم؟" loading="lazy">
+              <span class="post-card__cat">أسرة</span>
+            </div>
+            <div class="post-card__body">
+              <h3 class="post-card__title">التربية بالحبّ: كيف نبني مع أطفالنا علاقةً تدوم؟</h3>
+              <p class="post-card__excerpt">أساليبُ لطيفة تُعزّز ثقة الطفل بنفسه، وتمنحه شعورًا عميقًا بالأمان والانتماء.</p>
+              <div class="post-card__meta">
+                <span class="post-card__author"><i class="fa-solid fa-feather" aria-hidden="true"></i> أسماء عوض</span>
+                <span><i class="fa-regular fa-calendar" aria-hidden="true"></i> 11 يونيو 2026</span>
+                <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 8 د قراءة</span>
+              </div>
+            </div>
+          </a>
+          <a class="post-card" href="single-article.html" data-category="decor" data-order="21" data-views="6300">
+            <div class="post-card__media">
+              <img src="https://images.unsplash.com/photo-1588471980726-8346cb477a33?w=600&h=380&fit=crop&crop=faces&q=80&auto=format" alt="ركنُكِ الخاص: زاويةٌ للقراءة والتأمّل في قلب بيتكِ" loading="lazy">
+              <span class="post-card__cat">ديكور</span>
+            </div>
+            <div class="post-card__body">
+              <h3 class="post-card__title">ركنُكِ الخاص: زاويةٌ للقراءة والتأمّل في قلب بيتكِ</h3>
+              <p class="post-card__excerpt">بكرسيٍّ وثير وضوءٍ دافئ ونبتةٍ صغيرة، تتحوّل أبسط زاوية إلى ملاذٍ يخصّكِ وحدكِ.</p>
+              <div class="post-card__meta">
+                <span class="post-card__author"><i class="fa-solid fa-feather" aria-hidden="true"></i> مريم خالد</span>
+                <span><i class="fa-regular fa-calendar" aria-hidden="true"></i> 10 يونيو 2026</span>
+                <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 5 د قراءة</span>
+              </div>
+            </div>
+          </a>
+          <a class="post-card" href="single-article.html" data-category="saha" data-order="20" data-views="7900">
+            <div class="post-card__media">
+              <img src="https://images.unsplash.com/photo-1518708909080-704599b19972?w=600&h=380&fit=crop&crop=faces&q=80&auto=format" alt="استعيدي توازنكِ: عاداتٌ صغيرة تُجدّد طاقتكِ النفسية" loading="lazy">
+              <span class="post-card__cat">صحة</span>
+            </div>
+            <div class="post-card__body">
+              <h3 class="post-card__title">استعيدي توازنكِ: عاداتٌ صغيرة تُجدّد طاقتكِ النفسية</h3>
+              <p class="post-card__excerpt">دقائقُ من التنفّس العميق والصمت قد تكون أرحم ما تُهدينه لنفسكِ في يومٍ مزدحم.</p>
+              <div class="post-card__meta">
+                <span class="post-card__author"><i class="fa-solid fa-feather" aria-hidden="true"></i> د. هنا سعيد</span>
+                <span><i class="fa-regular fa-calendar" aria-hidden="true"></i> 9 يونيو 2026</span>
+                <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 6 د قراءة</span>
+              </div>
+            </div>
+          </a>
+          <a class="post-card" href="single-article.html" data-category="matbakh" data-order="19" data-views="5400">
+            <div class="post-card__media">
+              <img src="https://images.unsplash.com/photo-1556911073-52527ac43761?w=600&h=380&fit=crop&crop=faces&q=80&auto=format" alt="عشاءٌ في عشرين دقيقة: وصفاتٌ سريعة تليق بيومكِ المزدحم" loading="lazy">
+              <span class="post-card__cat">مطبخ</span>
+            </div>
+            <div class="post-card__body">
+              <h3 class="post-card__title">عشاءٌ في عشرين دقيقة: وصفاتٌ سريعة تليق بيومكِ المزدحم</h3>
+              <p class="post-card__excerpt">أفكارٌ لذيذة ومُغذّية تجمع العائلة حول المائدة دون عناءٍ أو إرهاق.</p>
+              <div class="post-card__meta">
+                <span class="post-card__author"><i class="fa-solid fa-feather" aria-hidden="true"></i> مريم خالد</span>
+                <span><i class="fa-regular fa-calendar" aria-hidden="true"></i> 7 يونيو 2026</span>
+                <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 4 د قراءة</span>
+              </div>
+            </div>
+          </a>
+          <a class="post-card" href="single-article.html" data-category="osra" data-order="18" data-views="6800">
+            <div class="post-card__media">
+              <img src="https://images.unsplash.com/photo-1764267704086-261af367c19f?w=600&h=380&fit=crop&crop=faces&q=80&auto=format" alt="حين يكبر أبناؤنا: مفاتيح حوارٍ صادق مع المراهقين" loading="lazy">
+              <span class="post-card__cat">أسرة</span>
+            </div>
+            <div class="post-card__body">
+              <h3 class="post-card__title">حين يكبر أبناؤنا: مفاتيح حوارٍ صادق مع المراهقين</h3>
+              <p class="post-card__excerpt">بين الحماية والثقة خيطٌ رفيع… إليكِ كيف تُمسكين به بحكمةٍ وحنان.</p>
+              <div class="post-card__meta">
+                <span class="post-card__author"><i class="fa-solid fa-feather" aria-hidden="true"></i> أسماء عوض</span>
+                <span><i class="fa-regular fa-calendar" aria-hidden="true"></i> 5 يونيو 2026</span>
+                <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 9 د قراءة</span>
+              </div>
+            </div>
+          </a>
+          <a class="post-card" href="single-article.html" data-category="decor" data-order="17" data-views="5100">
+            <div class="post-card__media">
+              <img src="https://images.unsplash.com/photo-1631679706909-1844bbd07221?w=600&h=380&fit=crop&crop=faces&q=80&auto=format" alt="ألوان الصيف في بيتكِ: خمس لمساتٍ تُجدّد المكان" loading="lazy">
+              <span class="post-card__cat">ديكور</span>
+            </div>
+            <div class="post-card__body">
+              <h3 class="post-card__title">ألوان الصيف في بيتكِ: خمس لمساتٍ تُجدّد المكان</h3>
+              <p class="post-card__excerpt">غيّري مزاج منزلكِ بتفاصيل بسيطة: وسائدُ دافئة، ونباتٌ أخضر، وضوءٌ يداعب الأركان.</p>
+              <div class="post-card__meta">
+                <span class="post-card__author"><i class="fa-solid fa-feather" aria-hidden="true"></i> مريم خالد</span>
+                <span><i class="fa-regular fa-calendar" aria-hidden="true"></i> 2 يونيو 2026</span>
+                <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 5 د قراءة</span>
+              </div>
+            </div>
+          </a>
+          <a class="post-card" href="single-article.html" data-category="tatweer" data-order="16" data-views="8200">
+            <div class="post-card__media">
+              <img src="https://images.unsplash.com/photo-1517971129774-8a2b38fa128e?w=600&h=380&fit=crop&crop=faces&q=80&auto=format" alt="حين وجدتُ نفسي في الكتابة بعد سنواتٍ من الصمت" loading="lazy">
+              <span class="post-card__cat">تطوير الذات</span>
+            </div>
+            <div class="post-card__body">
+              <h3 class="post-card__title">حين وجدتُ نفسي في الكتابة بعد سنواتٍ من الصمت</h3>
+              <p class="post-card__excerpt">قصةٌ شخصية عن رحلة اكتشاف الذات عبر الكلمات، وكيف صارت الكتابة ملاذًا آمنًا.</p>
+              <div class="post-card__meta">
+                <span class="post-card__author"><i class="fa-solid fa-feather" aria-hidden="true"></i> رشا المصري</span>
+                <span><i class="fa-regular fa-calendar" aria-hidden="true"></i> 1 يونيو 2026</span>
+                <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 7 د قراءة</span>
+              </div>
+            </div>
+          </a>
+          <a class="post-card" href="single-article.html" data-category="fikr" data-order="15" data-views="9600">
+            <div class="post-card__media">
+              <img src="https://images.unsplash.com/photo-1456324504439-367cee3b3c32?w=600&h=380&fit=crop&crop=faces&q=80&auto=format" alt="في معنى أن تكوني أنتِ: تأمّلاتٌ في الحرية الحقيقية للمرأة" loading="lazy">
+              <span class="post-card__cat">فكر</span>
+            </div>
+            <div class="post-card__body">
+              <h3 class="post-card__title">في معنى أن تكوني أنتِ: تأمّلاتٌ في الحرية الحقيقية للمرأة</h3>
+              <p class="post-card__excerpt">هل الحريةُ أن نفعل ما نشاء؟ أم أنها تبدأ من فهمِ ما نحتاجه حقًّا؟</p>
+              <div class="post-card__meta">
+                <span class="post-card__author"><i class="fa-solid fa-feather" aria-hidden="true"></i> سارة النمر</span>
+                <span><i class="fa-regular fa-calendar" aria-hidden="true"></i> 29 مايو 2026</span>
+                <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 11 د قراءة</span>
+              </div>
+            </div>
+          </a>
+          <a class="post-card" href="single-article.html" data-category="fikr" data-order="14" data-views="7100">
+            <div class="post-card__media">
+              <img src="https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=600&h=380&fit=crop&crop=faces&q=80&auto=format" alt="الأمومة ليست وظيفة: حين نعيد تعريف أجملِ الأدوار وأصعبها" loading="lazy">
+              <span class="post-card__cat">فكر</span>
+            </div>
+            <div class="post-card__body">
+              <h3 class="post-card__title">الأمومة ليست وظيفة: حين نعيد تعريف أجملِ الأدوار وأصعبها</h3>
+              <p class="post-card__excerpt">بين الصورة المثالية والواقع اليومي فجوةٌ واسعة في نظرتنا إلى الأمومة.</p>
+              <div class="post-card__meta">
+                <span class="post-card__author"><i class="fa-solid fa-feather" aria-hidden="true"></i> د. هنا سعيد</span>
+                <span><i class="fa-regular fa-calendar" aria-hidden="true"></i> 26 مايو 2026</span>
+                <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 9 د قراءة</span>
+              </div>
+            </div>
+          </a>
+          <a class="post-card" href="single-article.html" data-category="omoma" data-order="13" data-views="6900">
+            <div class="post-card__media">
+              <img src="https://images.unsplash.com/photo-1611066028607-cd58e29818f5?w=600&h=380&fit=crop&crop=faces&q=80&auto=format" alt="حين تكبر بناتنا: رسالةٌ من أمٍّ إلى ابنتها الصغيرة" loading="lazy">
+              <span class="post-card__cat">أمومة</span>
+            </div>
+            <div class="post-card__body">
+              <h3 class="post-card__title">حين تكبر بناتنا: رسالةٌ من أمٍّ إلى ابنتها الصغيرة</h3>
+              <p class="post-card__excerpt">كلماتٌ نودّ لو همسناها مبكرًا، عن الثقة والجمال والقيمة التي لا تُقاس بنظرة أحد.</p>
+              <div class="post-card__meta">
+                <span class="post-card__author"><i class="fa-solid fa-feather" aria-hidden="true"></i> أسماء عوض</span>
+                <span><i class="fa-regular fa-calendar" aria-hidden="true"></i> 24 مايو 2026</span>
+                <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 6 د قراءة</span>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="empty-state" data-archive-empty style="display:none">
+          <div class="empty-state__icon"><i class="fa-regular fa-folder-open" aria-hidden="true"></i></div>
+          <h3 class="empty-state__title">لا توجد نتائج مطابقة</h3>
+          <p class="empty-state__text">جرّبي كلمةً أخرى أو اختاري تصنيفًا مختلفًا — هناك الكثير لاكتشافه.</p>
+        </div>
+      <nav class="pagination" aria-label="ترقيم الصفحات">
+        <a class="pagination__link pagination__link--text" href="#" aria-disabled="true"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i> <span>السابق</span></a>
+        <a class="pagination__link is-active" href="#">1</a>
+        <a class="pagination__link" href="#">2</a>
+        <a class="pagination__link" href="#">3</a>
+        <a class="pagination__link pagination__link--text" href="#"><span>التالي</span> <i class="fa-solid fa-chevron-left" aria-hidden="true"></i></a>
+      </nav>
+      </section>
+    </main>
+
+    <!-- ====== Footer ====== -->
+    <footer class="footer-pro">
+      <div class="footer-pro__main">
+        <div class="sec__container">
+          <div class="footer-pro__grid">
+            <div class="footer-pro__brand">
+              <a href="index.html" class="footer-pro__logo"><img src="images/logo.png" alt="بنفسج" /></a>
+              <p class="footer-pro__desc">يُعنى بنفسج بالمرأة وقضاياها في المجالات الفكرية والثقافية والاجتماعية، بطابع نهضويّ متحيز لقضايا المجتمع العادلة.</p>
+              <div class="footer-pro__newsletter">
+                <h4 class="footer-pro__newsletter-title">اشتركي في نشرتنا البريدية</h4>
+                <form class="footer-pro__form">
+                  <input type="email" placeholder="بريدك الإلكتروني" class="footer-pro__input" aria-label="بريدك الإلكتروني" />
+                  <button type="submit" class="footer-pro__submit" aria-label="اشتراك في النشرة"><i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+              </div>
+            </div>
+            <div class="footer-pro__links">
+              <h4 class="footer-pro__title">الأقسام</h4>
+              <ul class="footer-pro__list">
+                <li><a href="category.html">حضور امرأة</a></li>
+                <li><a href="category.html">سيدتي</a></li>
+                <li><a href="category.html">فلسطينيات</a></li>
+                <li><a href="category.html">سلاسل</a></li>
+                <li><a href="category.html">فكر</a></li>
+              </ul>
+            </div>
+            <div class="footer-pro__links">
+              <h4 class="footer-pro__title">المزيد</h4>
+              <ul class="footer-pro__list">
+                <li><a href="articles.html">كل المقالات</a></li>
+                <li><a href="category.html">أسرة</a></li>
+                <li><a href="category.html">ديكور</a></li>
+                <li><a href="author.html">مدونات</a></li>
+                <li><a href="index.html">فيديو</a></li>
+              </ul>
+            </div>
+            <div class="footer-pro__links">
+              <h4 class="footer-pro__title">بنفسج</h4>
+              <ul class="footer-pro__list">
+                <li><a href="about.html">عن بنفسج</a></li>
+                <li><a href="contact-us.html">تواصلي معنا</a></li>
+                <li><a href="faq.html">الأسئلة الشائعة</a></li>
+                <li><a href="privacy-policy.html">سياسة الخصوصية</a></li>
+                <li><a href="terms.html">شروط الاستخدام</a></li>
+              </ul>
+            </div>
+            <div class="footer-pro__social-col">
+              <h4 class="footer-pro__title">تابعينا</h4>
+              <div class="footer-pro__social">
+                <a href="#" class="footer-pro__social-link footer-pro__social-link--fb" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" class="footer-pro__social-link footer-pro__social-link--tw" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#" class="footer-pro__social-link footer-pro__social-link--ig" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="footer-pro__social-link footer-pro__social-link--yt" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#" class="footer-pro__social-link footer-pro__social-link--sc" aria-label="SoundCloud"><i class="fa-brands fa-soundcloud"></i></a>
+              </div>
+              <div class="footer-pro__apps">
+                <span class="footer-pro__apps-label">حمّلي التطبيق</span>
+                <div class="footer-pro__apps-badges">
+                  <a href="#" class="footer-pro__app-badge"><i class="fa-brands fa-apple"></i><span>App Store</span></a>
+                  <a href="#" class="footer-pro__app-badge"><i class="fa-brands fa-google-play"></i><span>Google Play</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-pro__bottom">
+        <div class="sec__container">
+          <div class="footer-pro__bottom-inner">
+            <p class="footer-pro__copy">جميع الحقوق محفوظة لـ <strong>بنفسج</strong> © 2026</p>
+            <p class="footer-pro__made">صُنع بـ <span class="footer-pro__heart">💜</span> لأجل المرأة العربية</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/pages.js"></script>
+  </body>
+
+</html>

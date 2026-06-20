@@ -1525,7 +1525,7 @@ body.is-locked {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: var(--space-6);
-    align-items: start;
+    align-items: stretch;
 }
 
 /* Hero Article */
@@ -1626,6 +1626,8 @@ body.is-locked {
 }
 
 .wv-card {
+    display: flex;
+    flex: 1;
     border-radius: var(--radius-md);
     overflow: hidden;
     border: 1px solid var(--border-subtle);
@@ -1640,20 +1642,22 @@ body.is-locked {
 
 .wv-card__link {
     display: flex;
-    gap: var(--space-3);
+    flex: 1;
+    align-items: stretch;
+    gap: var(--space-4);
     text-decoration: none;
-    padding: var(--space-2) var(--space-3);
+    padding: var(--space-3);
 }
 
 .wv-card__img {
-    width: 90px;
-    height: 70px;
+    flex: 0 0 42%;
+    align-self: stretch;
     border-radius: var(--radius-sm);
     overflow: hidden;
-    flex-shrink: 0;
 }
 
 .wv-card__img img {
+    display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -1704,23 +1708,28 @@ body.is-locked {
 @media (max-width: 900px) {
     .women-voices__grid {
         grid-template-columns: 1fr;
+        align-items: start;
     }
-    
+
     .wv-hero__media {
         aspect-ratio: 16 / 9;
         max-height: none;
     }
-    
+
     .wv-list {
         flex-direction: row;
         overflow-x: auto;
         gap: var(--space-3);
         padding-bottom: var(--space-2);
     }
-    
+
     .wv-card {
-        flex-shrink: 0;
-        width: 280px;
+        flex: 0 0 300px;
+    }
+
+    .wv-card__img {
+        flex-basis: 40%;
+        min-height: 96px;
     }
 }
 
@@ -1784,6 +1793,8 @@ body.is-locked {
 
 /* Lifestyle Card */
 .lt-card {
+    display: flex;
+    flex-direction: column;
     background: var(--bg-surface);
     border-radius: var(--radius-lg);
     overflow: hidden;
@@ -1793,22 +1804,26 @@ body.is-locked {
 
 .lt-card:hover {
     border-color: var(--primary-200);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    box-shadow: var(--shadow-lg);
     transform: translateY(-4px);
 }
 
 .lt-card__link {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
     text-decoration: none;
 }
 
 .lt-card__img {
     position: relative;
-    aspect-ratio: 16 / 10;
+    aspect-ratio: 3 / 2;
     overflow: hidden;
+    background: var(--bg-muted);
 }
 
 .lt-card__img img {
+    display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -1831,7 +1846,10 @@ body.is-locked {
 }
 
 .lt-card__body {
-    padding: var(--space-4);
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: var(--space-5);
 }
 
 .lt-card__title {
@@ -1861,7 +1879,11 @@ body.is-locked {
 
 .lt-card__meta {
     display: flex;
-    gap: var(--space-4);
+    flex-wrap: wrap;
+    gap: 6px var(--space-4);
+    margin-top: auto;
+    padding-top: var(--space-3);
+    border-top: 1px solid var(--border-subtle);
     font-size: var(--text-xs);
     color: var(--text-secondary);
 }
@@ -2173,7 +2195,8 @@ body.is-locked {
 }
 
 .palest__card {
-    display: block;
+    display: flex;
+    flex-direction: column;
     text-decoration: none;
     background: rgba(255, 255, 255, 0.05);
     border-radius: var(--radius-lg);
@@ -2196,8 +2219,9 @@ body.is-locked {
 }
 
 .palest__card-img img {
+    display: block;
     width: 100%;
-    aspect-ratio: 16/10;
+    aspect-ratio: 3 / 2;
     object-fit: cover;
     transition: transform var(--transition-slow);
 }
@@ -2219,6 +2243,9 @@ body.is-locked {
 }
 
 .palest__card-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
     padding: var(--space-5);
 }
 
@@ -2244,6 +2271,7 @@ body.is-locked {
 }
 
 .palest__card-meta {
+    margin-top: auto;
     font: 400 var(--text-xs)/1 var(--font-body);
     color: rgba(255, 255, 255, 0.4);
 }
@@ -2603,14 +2631,15 @@ body.is-locked {
 }
 
 .series-other__cover {
-    width: 56px;
-    height: 60px;
+    width: 76px;
+    height: 90px;
     border-radius: var(--radius-sm);
     overflow: hidden;
     flex-shrink: 0;
 }
 
 .series-other__cover img {
+    display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -4497,7 +4526,7 @@ body.is-locked {
 .video-card__thumb {
     position: relative;
     flex-shrink: 0;
-    width: 150px;
+    width: 190px;
     aspect-ratio: 16/9;
     border-radius: var(--radius-lg);
     overflow: hidden;
@@ -4764,9 +4793,6 @@ body.is-locked {
     background: linear-gradient(135deg, #cc0000 0%, #990000 100%);
     transform: translateY(-2px);
     box-shadow: 0 6px 18px rgba(204, 0, 0, 0.30);
-}
-
-.video-showcase__subscribe i {
 }
 
 .video-showcase__subscribe:hover i {

@@ -114,15 +114,36 @@ const ARTICLES = [
 const byId = (id) => ARTICLES.find((a) => a.id === id);
 const authorOf = (a) => AUTHORS[a.author];
 
-// Render one post-card. `cls` lets callers add a data-order/views for sort.
+// Render one image-forward post-card (image leads, text supports).
 function card(a) {
   const au = AUTHORS[a.author];
   return `          <a class="post-card" href="single-article.html" data-category="${a.cat}" data-order="${a.id}" data-views="${a.views}">
             <div class="post-card__media">
-              <img src="${imgU(a.img, 600, 380, a.crop || "faces")}" alt="${a.title}" loading="lazy">
+              <img src="${imgU(a.img, 760, 506, a.crop || "faces")}" alt="${a.title}" loading="lazy">
               <span class="post-card__cat">${catLabel(a.cat)}</span>
             </div>
             <div class="post-card__body">
+              <h3 class="post-card__title">${a.title}</h3>
+              <p class="post-card__excerpt">${a.excerpt}</p>
+              <div class="post-card__meta">
+                <span class="post-card__author"><i class="fa-solid fa-feather" aria-hidden="true"></i> ${au.name}</span>
+                <span><i class="fa-regular fa-calendar" aria-hidden="true"></i> ${a.date}</span>
+                <span><i class="fa-regular fa-clock" aria-hidden="true"></i> ${a.read} د قراءة</span>
+              </div>
+            </div>
+          </a>`;
+}
+
+// Large featured "lead story" card — the big image hero (Al-Maidan style).
+function featuredCard(a) {
+  const au = AUTHORS[a.author];
+  return `          <a class="post-card post-card--featured" href="single-article.html" data-category="${a.cat}" data-order="${a.id}" data-views="${a.views}">
+            <div class="post-card__media">
+              <img src="${imgU(a.img, 1100, 760, a.crop || "faces")}" alt="${a.title}" loading="eager">
+              <span class="post-card__cat">${catLabel(a.cat)}</span>
+            </div>
+            <div class="post-card__body">
+              <span class="post-card__lead">القصة الرئيسية</span>
               <h3 class="post-card__title">${a.title}</h3>
               <p class="post-card__excerpt">${a.excerpt}</p>
               <div class="post-card__meta">
@@ -145,4 +166,4 @@ function rankedItem(a, n) {
             </a>`;
 }
 
-module.exports = { imgU, AUTHORS, CATEGORIES, ARTICLES, catLabel, byId, authorOf, card, rankedItem };
+module.exports = { imgU, AUTHORS, CATEGORIES, ARTICLES, catLabel, byId, authorOf, card, featuredCard, rankedItem };

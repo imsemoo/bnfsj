@@ -1,6 +1,6 @@
 const fs = require("fs");
 const { page } = require("./_chrome");
-const { ARTICLES, CATEGORIES, card, imgU, catLabel } = require("./_data");
+const { ARTICLES, CATEGORIES, card, featuredCard, imgU, catLabel } = require("./_data");
 
 const chips = (active = "all") =>
   CATEGORIES.map((c) => {
@@ -38,7 +38,11 @@ const emptyState = `        <div class="empty-state" data-archive-empty style="d
           <p class="empty-state__text">جرّبي كلمةً أخرى أو اختاري تصنيفًا مختلفًا — هناك الكثير لاكتشافه.</p>
         </div>`;
 
-const grid = (list) => `        <div class="archive-grid" data-archive-grid>\n${list.map(card).join("\n")}\n        </div>`;
+// First article renders as the big featured lead card; the rest as image-forward cards.
+const grid = (list) => {
+  const cards = list.map((a, i) => (i === 0 ? featuredCard(a) : card(a)));
+  return `        <div class="archive-grid" data-archive-grid>\n${cards.join("\n")}\n        </div>`;
+};
 
 /* ---------- articles.html ---------- */
 {
